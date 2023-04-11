@@ -11,19 +11,21 @@
     
     <title>vue-email-list</title>
 </head>
-<body>
+<body class="bg-dark">
 
-    <div id="app"  class="text-center">
+    <div id="app">
+        <div class="container d-flex flex-column align-items-center py-5">
+            <h1 class="text-white"> {{titolo}} </h1>
 
-        <h1> {{titolo}} </h1>
-
-        <ul v-if="randomMail.length === 10">
-            <li v-for="mail in randomMail"> 
-                {{mail}} 
-            </li> 
-        </ul>
-
-        <button @click="getData"> Get data </button>
+            <ul v-if="randomMail.length === 10" class="card p-2">
+                <li v-for="mail in randomMail"> 
+                    {{mail}} 
+                </li> 
+            </ul>
+    
+            <button class="btn btn-warning" @click="getData"> Get email </button>
+        </div>
+       
 
     </div>
     

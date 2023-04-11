@@ -1,3 +1,5 @@
 ul{
     list-style: none;
+    padding: 0 !important;
+    box-shadow: 0 0 0.3rem white;
 }
