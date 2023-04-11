@@ -20,19 +20,25 @@ createApp({
     },
     methods:{
         getData(){
-
             this.randomMail = [];
-            for(let i = 0; i < 10; i++){
-                axios.get(this.basePath+'random/mail').then((result)=>{
-                    console.log(result.data.response);
-                    this.randomMail.push(result.data.response);
-                });
-            }
+            setTimeout(() => {
+                for(let i = 0; i < 10; i++){
+                    axios.get(this.basePath+'random/mail').then((result)=>{
+                        console.log(result.data.response);
+                        this.randomMail.push(result.data.response);
+                    });
+                }
+            }, 3000);
+           
            
         }
     },
     mounted(){
-        this.getData();
+        setTimeout(() => {
+            this.getData();
+        }, 2000);
+        
+        
 
     },
 }).mount('#app');
